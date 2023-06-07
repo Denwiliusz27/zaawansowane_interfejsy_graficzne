@@ -8,43 +8,11 @@
         Title="Produkty" Height="450" Width="800">
     <Grid Width="600" Height="400">
         <StackPanel Orientation="Horizontal" Height="30" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Button Content="Produkty" Margin="0 0 20 0" Width="70" Click="ProductsNavigate"/>
-            <Button Content="Koszyk" Width="70" Click="BasketNavigate"/>
+            <Button Content="Produkty" Margin="0 0 20 0" Width="70" Command="{Binding ProductsNavigateCommand}"/>
+            <Button Content="Koszyk" Width="70" Command="{Binding BasketNavigateCommand}"/>
         </StackPanel>
         <Line X1="10" Y1="50" X2="590" Y2="50" Stroke="Black" StrokeThickness="1" />
         <Frame x:Name="Main" Margin="0,60,0,0"  NavigationUIVisibility="Hidden" />
-
-
-        <!--<Grid>
-            <TabControl x:Name="tabControl" SelectionChanged="TabControl_SelectionChanged">
-                <TabItem Header="Produkty">
-                    <local:ProductsView />
-                </TabItem>
-                <TabItem Header="Koszyk">
-                    <TextBlock Text="koszyk" />
-                </TabItem>
-            </TabControl>
-        </Grid>-->
-
-
-
-        
-        <!--<Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-        </Grid>
-
-        <TextBlock Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center">Produkty</TextBlock>
-
-        <local:ProductView  Grid.Column="2" Grid.Row="2"/>-->
 
     </Grid>
 </Window>
