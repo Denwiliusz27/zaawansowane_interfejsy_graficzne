@@ -12,7 +12,12 @@ C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\Shopp
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.csproj.CoreCompileInputs.cache
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.exe
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.pdb
-C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\MainWindow.g.cs
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\HomeView.g.cs
-C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\MainWindow.baml
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\HomeView.baml
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\ProductView.g.cs
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\ProductView.baml
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\ProductsView.g.cs
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\BasketView.g.cs
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\ProductsView.baml
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\BasketView.baml

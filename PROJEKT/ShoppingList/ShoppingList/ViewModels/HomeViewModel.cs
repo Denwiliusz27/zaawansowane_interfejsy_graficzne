@@ -9,14 +9,15 @@ namespace ShoppingList.ViewModels
 {
     public class HomeViewModel
     {
-        public List<string> products { get; set; } = new List<string>();
+        public List<string> Products { get; set; } = new List<string>();
+
 
         public string newProductName { get; set; }
 
         private void addNewProduct() {
             var newProduct = newProductName;
 
-            products.Add(newProduct);
+            Products.Add(newProduct);
         }
     }
 }

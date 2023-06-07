@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\App.xaml
-2-1139004635
+4-593764768
 
-8-968672747
+10994710870
 13-1310406943
-Views\MainWindow.xaml;Views\HomeView.xaml;
+Views\BasketView.xaml;Views\HomeView.xaml;Views\ProductsView.xaml;Views\ProductView.xaml;
 
 True
 

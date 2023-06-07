@@ -28,5 +28,15 @@ namespace ShoppingList.Views
         {
 
         }
+
+        private void BasketNavigate(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new BasketView();
+        }
+
+        private void ProductsNavigate(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ProductsView();
+        }
     }
 }

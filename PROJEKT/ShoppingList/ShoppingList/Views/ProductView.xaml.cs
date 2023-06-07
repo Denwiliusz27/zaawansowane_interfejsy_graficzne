@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShoppingList
+namespace ShoppingList.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy ProductView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductView : UserControl
     {
-        public MainWindow()
+        public ProductView()
         {
             InitializeComponent();
         }
