@@ -1,0 +1,25 @@
+﻿<Window x:Class="ShoppingList.Views.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingList.Views"
+        mc:Ignorable="d"
+        Title="HomeView" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="productListbox" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="300">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding}" VerticalAlignment="Center" Margin="5"/>
+                        <Button Content="Dodaj" Grid.Column="1"  Margin="5"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
