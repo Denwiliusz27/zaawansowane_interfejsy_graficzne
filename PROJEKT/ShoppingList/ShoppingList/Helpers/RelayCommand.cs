@@ -7,6 +7,7 @@ using System.Windows.Input;
 
 namespace ShoppingList.Helpers
 {
+    // wiąże komendę z metodą klasy
     public class RelayCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;

@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShoppingList.Views"
         mc:Ignorable="d"
-        Title="Produkty" Height="450" Width="800">
-    <Grid Width="600" Height="400">
+        MinHeight="450"
+        MinWidth="600"
+        Title="Produkty" Height="450" Width="600">
+    <Grid Width="500" Height="400">
         <StackPanel Orientation="Horizontal" Height="30" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center">
             <Button Content="Produkty" Margin="0 0 20 0" Width="70" Command="{Binding ProductsNavigateCommand}"/>
             <Button Content="Koszyk" Width="70" Command="{Binding BasketNavigateCommand}"/>
         </StackPanel>
-        <Line X1="10" Y1="50" X2="590" Y2="50" Stroke="Black" StrokeThickness="1" />
+        <Line X1="10" Y1="50" X2="490" Y2="50" Stroke="Black" StrokeThickness="1" />
         <Frame x:Name="Main" Margin="0,60,0,0"  NavigationUIVisibility="Hidden" />
 
     </Grid>

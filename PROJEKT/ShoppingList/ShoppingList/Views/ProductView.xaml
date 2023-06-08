@@ -9,7 +9,8 @@
     <Grid >
         <WrapPanel Orientation="Horizontal" Margin="0 10 10 0">
             <Button Content="Dodaj" Width="60" Margin="0 0 10 0"/>
-            <TextBlock Text="przykladowy produkt" />
+            <TextBlock Text="{Binding Name}" />
+            <TextBlock Text="{Binding Value, StringFormat='({0} zł)'}" Margin="10 0 0 0" />
         </WrapPanel>
     </Grid>
 </UserControl>
