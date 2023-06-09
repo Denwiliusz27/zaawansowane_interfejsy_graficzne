@@ -21,20 +21,21 @@ namespace ShoppingList.ViewModels
         public string NewProductName {get;set;}
         public Double NewProductValue { get; set; }
         public ICommand AddNewProductCommand { get; set; }
+        public ICommand DeleteProductCommand { get; set; }
 
         public ProductsViewModel() {
             AddNewProductCommand = new RelayCommand(AddNewProduct);
+            DeleteProductCommand = new RelayCommand(DeleteProduct);
         }
 
-        private void AddNewProduct()
-        {
+        private void AddNewProduct(){
             AvailableProducts.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
             NewProductName = "";
             NewProductValue = 0;
         }
 
-        private void DeleteProduct() { 
-            
+        private void DeleteProduct(object product){
+            AvailableProducts.Remove((ProductModel)product);
         }
     }
 }
