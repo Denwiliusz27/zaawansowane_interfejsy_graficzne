@@ -1,0 +1,20 @@
+﻿<Window x:Class="ProductsApp.Views.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductsApp.Views"
+        mc:Ignorable="d"
+        MinHeight="450"
+        MinWidth="600"
+        Title="Produkty" Height="450" Width="600">
+    <Grid Height="400" Margin="20,17,20,17">
+        <StackPanel Orientation="Horizontal" Height="30" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Content="Produkty" Style="{StaticResource NavigateButton}"  Command="{Binding ProductsNavigateCommand}"/>
+            <Button Content="Koszyk" Style="{StaticResource NavigateButton}" Command="{Binding BasketNavigateCommand}"/>
+        </StackPanel>
+        <Line X1="10" Y1="50" X2="550" Y2="50" Stroke="Black" StrokeThickness="1" />
+        <Frame x:Name="Main" Margin="0,60,0,0"  NavigationUIVisibility="Hidden" />
+
+    </Grid>
+</Window>
