@@ -5,6 +5,7 @@ using ShoppingList.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,11 +29,12 @@ namespace ShoppingList.ViewModels
         private void AddNewProduct()
         {
             AvailableProducts.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
-            
             NewProductName = "";
-            OnPropertyChanged(nameof(NewProductName));
             NewProductValue = 0;
-            OnPropertyChanged(nameof(NewProductValue));
+        }
+
+        private void DeleteProduct() { 
+            
         }
     }
 }

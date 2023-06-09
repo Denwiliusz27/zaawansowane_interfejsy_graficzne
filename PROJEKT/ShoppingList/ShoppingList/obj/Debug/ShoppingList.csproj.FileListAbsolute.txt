@@ -25,3 +25,8 @@ C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\Shopp
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\bin\Debug\Prism.pdb
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\bin\Debug\Prism.xml
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.csproj.CopyComplete
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.csproj.Fody.CopyLocal.cache
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\App.baml
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Styles\Styles.baml

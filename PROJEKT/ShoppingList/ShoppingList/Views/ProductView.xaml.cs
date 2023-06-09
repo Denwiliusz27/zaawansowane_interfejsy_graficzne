@@ -1,4 +1,5 @@
-﻿using ShoppingList.ViewModels;
+﻿using ShoppingList.Models;
+using ShoppingList.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
