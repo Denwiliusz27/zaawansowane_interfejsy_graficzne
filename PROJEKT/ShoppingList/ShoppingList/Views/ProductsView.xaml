@@ -11,7 +11,7 @@
 
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="485" Margin="0 30 0 0 ">
             <ScrollViewer>
-                <ItemsControl ItemsSource="{Binding AvailableProducts}" Width="233">
+                <ItemsControl ItemsSource="{Binding AvailableProducts}" Width="275" >
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <local:ProductView />
@@ -20,11 +20,11 @@
                 </ItemsControl>
             </ScrollViewer>
 
-            <WrapPanel Orientation="Vertical" Margin="10 10 10 0" HorizontalAlignment="Center">
-                <TextBlock Text="Nazwa produktu:" Width="190" />
-                <TextBox Text="{Binding NewProductName}"/>
+            <WrapPanel Orientation="Vertical" Margin="15 10 10 0" HorizontalAlignment="Center">
+                <TextBlock Text="Nazwa produktu:" Width="160" />
+                <TextBox Text="{Binding NewProductName, Mode=TwoWay}"/>
                 <TextBlock Text="Cena produktu:" />
-                <TextBox Text="{Binding NewProductValue}"/>
+                <TextBox Text="{Binding NewProductValue, Mode=TwoWay}"/>
                 <Button Content="Dodaj produkt" Command="{Binding AddNewProductCommand}" Width="90" Margin="0 10 0 0"/>
             </WrapPanel>
 

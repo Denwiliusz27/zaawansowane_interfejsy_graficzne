@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
+
 namespace ShoppingList.Helpers
 {
     // wiąże komendę z metodą klasy
@@ -13,7 +14,8 @@ namespace ShoppingList.Helpers
         public event EventHandler CanExecuteChanged;
         private Action mAction;
 
-        public RelayCommand(Action action) { 
+        public RelayCommand(Action action)
+        {
             mAction = action;
         }
 

@@ -21,3 +21,7 @@ C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\Shopp
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\BasketView.g.cs
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\ProductsView.baml
 C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\Views\BasketView.baml
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\bin\Debug\Prism.dll
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\bin\Debug\Prism.pdb
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\bin\Debug\Prism.xml
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\PROJEKT\ShoppingList\ShoppingList\obj\Debug\ShoppingList.csproj.CopyComplete
