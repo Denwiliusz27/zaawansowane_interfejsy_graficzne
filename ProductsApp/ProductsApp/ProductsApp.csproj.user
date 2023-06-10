@@ -16,14 +16,8 @@
     <Compile Update="Views\ProductsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ProductView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Styles\Styles.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,9 +28,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ProductsView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\ProductView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
