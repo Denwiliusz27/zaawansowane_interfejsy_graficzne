@@ -1,0 +1,12 @@
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\bin\Debug\net6.0\ProductsApp.Datab.deps.json
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\bin\Debug\net6.0\ProductsApp.Datab.dll
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\bin\Debug\net6.0\ProductsApp.Datab.pdb
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ProductsApp.Datab.csproj.AssemblyReference.cache
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ProductsApp.Datab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ProductsApp.Datab.AssemblyInfoInputs.cache
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ProductsApp.Datab.AssemblyInfo.cs
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ProductsApp.Datab.csproj.CoreCompileInputs.cache
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ProductsApp.Datab.dll
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\refint\ProductsApp.Datab.dll
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ProductsApp.Datab.pdb
+C:\Users\xxx\Desktop\Things\STUDIA\MAGISTERKA\Interfejsy graficzne\ProductsApp\ProductsApp.Database\obj\Debug\net6.0\ref\ProductsApp.Datab.dll

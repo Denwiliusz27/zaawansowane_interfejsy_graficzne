@@ -1,4 +1,5 @@
-﻿using ProductsApp.Helpers;
+﻿using ProductsApp.Database;
+using ProductsApp.Helpers;
 using ProductsApp.Models;
 using ProductsApp.ViewModels;
 using ProductsApp.Views;
@@ -27,11 +28,18 @@ namespace ProductsApp.ViewModels
         {
             AddNewProductCommand = new RelayCommand(AddNewProduct);
             DeleteProductCommand = new RelayCommand(DeleteProduct);
+
+            // pobieranie  
+            foreach (var product in DatabaseLocator.Database.Products.ToList()) {
+                AvailableProducts.Add(product);
+            };
         }
 
         private void AddNewProduct()
         {
             AvailableProducts.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
+            DatabaseLocator.Database.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
+            DatabaseLocator.Database.SaveChanges();
             NewProductName = "";
             NewProductValue = 0;
         }
@@ -39,6 +47,13 @@ namespace ProductsApp.ViewModels
         private void DeleteProduct(object product)
         {
             AvailableProducts.Remove((ProductModel)product);
+            var dbProduct = DatabaseLocator.Database.Products.FirstOrDefault( x => x.Id == ((ProductModel)product).Id );
+
+            if (dbProduct != null )
+            {
+                DatabaseLocator.Database.Products.Remove(dbProduct);
+                DatabaseLocator.Database.SaveChanges();
+            }
         }
     }
 }

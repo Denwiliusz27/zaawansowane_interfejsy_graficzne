@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProductsApp.Database;
+using ProductsApp.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,18 @@ namespace ProductsApp
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            // tworzenie bazy danych 
+            var database = new ProductsDbContext();
+
+            // upewnia się że baza danych jest stworzona, jeśli jest to używa istniejącej
+            database.Database.EnsureCreated();
+
+            // przypisanie do databaseLocator bazy danych m
+            DatabaseLocator.Database = database;
+        }
     }
 }
