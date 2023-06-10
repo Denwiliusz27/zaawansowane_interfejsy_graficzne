@@ -23,11 +23,12 @@ namespace ProductsApp.ViewModels
         public Double NewProductValue { get; set; }
         public ICommand AddNewProductCommand { get; set; }
         public ICommand DeleteProductCommand { get; set; }
+        public ICommand AddProductToBasketCommand { get; set; }
 
-        public ProductsViewModel()
-        {
+        public ProductsViewModel(){
             AddNewProductCommand = new RelayCommand(AddNewProduct);
             DeleteProductCommand = new RelayCommand(DeleteProduct);
+            AddProductToBasketCommand = new RelayCommand(AddProductToBasket);
 
             // pobieranie  
             foreach (var product in DatabaseLocator.Database.Products.ToList()) {
@@ -35,8 +36,7 @@ namespace ProductsApp.ViewModels
             };
         }
 
-        private void AddNewProduct()
-        {
+        private void AddNewProduct(){
             AvailableProducts.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
             DatabaseLocator.Database.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
             DatabaseLocator.Database.SaveChanges();
@@ -44,16 +44,29 @@ namespace ProductsApp.ViewModels
             NewProductValue = 0;
         }
 
-        private void DeleteProduct(object product)
-        {
+        private void DeleteProduct(object product) {
             AvailableProducts.Remove((ProductModel)product);
             var dbProduct = DatabaseLocator.Database.Products.FirstOrDefault( x => x.Id == ((ProductModel)product).Id );
 
             if (dbProduct != null )
             {
+                var basket = DatabaseLocator.Database.BasketProducts.Where(x => x.ProductId == dbProduct.Id);
+
+                if (basket != null) {
+                    foreach (var item in basket) { 
+                        DatabaseLocator.Database.BasketProducts.Remove(item);
+                    }
+                }
+
                 DatabaseLocator.Database.Products.Remove(dbProduct);
                 DatabaseLocator.Database.SaveChanges();
             }
+        }
+
+        private void AddProductToBasket(object product) {
+            DatabaseLocator.Database.BasketProducts.Add(
+                new BasketProduct { Amount = 1, ProductId = ((ProductModel)product).Id });
+            DatabaseLocator.Database.SaveChanges();
         }
     }
 }

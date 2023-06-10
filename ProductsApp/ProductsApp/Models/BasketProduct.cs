@@ -11,8 +11,7 @@ namespace ProductsApp.Models
     {
         public int Id { get; set; }
         public int Amount { get; set; }
-
-        [ForeignKey("ProductId")]
-        public ProductModel product { get; set; }
+        public int ProductId { get; set; }
+        public ProductModel Product { get; set; }
     }
 }

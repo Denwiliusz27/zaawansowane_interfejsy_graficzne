@@ -5,8 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProductsApp.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="koszyk" />
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid Height="300">
+        <TextBlock HorizontalAlignment="Left" Width="72" Margin="235,5,0,270" TextAlignment="Center">
+            <Run Language="pl-pl" Text="Koszyk"/>
+        </TextBlock>
+
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="300" Margin="0,30,0,10">
+            <Border BorderBrush="Black" BorderThickness="1">
+                <ScrollViewer Height="230">
+                    <ItemsControl ItemsSource="{Binding Basket}" Width="348" >
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+
+                                <WrapPanel Orientation="Horizontal" Margin="10 10 10 0" >
+                                    <WrapPanel Orientation="Horizontal" Width="225">
+                                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 10 0">
+                                            <RepeatButton Command="{Binding DataContext.IncreaseAmountCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" CommandParameter="{Binding}" Content="+" Width="20" FontWeight="Bold"/>
+                                            <TextBox Text="{Binding Amount, Mode=TwoWay}" Width="25" IsReadOnly="True"  HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                            <RepeatButton Command="{Binding DataContext.DecreaseAmountCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" CommandParameter="{Binding}" Content="-" Width="20" FontWeight="Bold" />
+                                        </WrapPanel>
+                                        <TextBlock Text="{Binding Product.Name}" />
+                                        <TextBlock Text="{Binding Product.Value, StringFormat='({0} zł)'}" Margin="10 0 0 0" />
+                                    </WrapPanel>
+
+                                    <Button Content="Usuń" Style="{StaticResource DeleteProductButton}" Command="{Binding DataContext.DeleteProductFromBasketCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}" />
+                                </WrapPanel>
+
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Border>
+        </WrapPanel>
     </Grid>
 </UserControl>
