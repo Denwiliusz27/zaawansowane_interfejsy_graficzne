@@ -38,6 +38,7 @@
                     </ItemsControl>
                 </ScrollViewer>
             </Border>
+            <TextBlock x:Name="productsValueTextBlock" Text="{Binding ProductsValue, Mode=TwoWay, StringFormat='Całkowita wartość: {0} zł'}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
         </WrapPanel>
     </Grid>
 </UserControl>

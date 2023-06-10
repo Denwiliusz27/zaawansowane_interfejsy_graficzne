@@ -4,16 +4,21 @@ using ProductsApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace ProductsApp.ViewModels
 {
-    public class BasketViewModel
+    public class BasketViewModel: BaseViewModel
     {
         public ObservableCollection<BasketProduct> Basket { get; set; } = new ObservableCollection<BasketProduct>();
+        public double ProductsValue { get; set; }
         public ICommand DeleteProductFromBasketCommand { get; set; }
         public ICommand IncreaseAmountCommand { get; set; }
         public ICommand DecreaseAmountCommand { get; set; }
@@ -24,11 +29,7 @@ namespace ProductsApp.ViewModels
             IncreaseAmountCommand = new RelayCommand(IncreaseAmount);
             DecreaseAmountCommand = new RelayCommand(DecreaseAmount);
 
-            // pobieranie  
-            foreach (var product in DatabaseLocator.Database.BasketProducts.ToList())
-            {
-                Basket.Add(product);
-            };
+            SetBasketList();
         }
 
 
@@ -50,11 +51,7 @@ namespace ProductsApp.ViewModels
             basketProduct.Amount++;
             DatabaseLocator.Database.SaveChanges();
 
-            Basket.Clear();
-            foreach (var temp in DatabaseLocator.Database.BasketProducts.ToList())
-            {
-                Basket.Add(temp);
-            };
+            SetBasketList();
         }
 
         private void DecreaseAmount(object product)
@@ -66,11 +63,29 @@ namespace ProductsApp.ViewModels
                 DatabaseLocator.Database.SaveChanges();
             }
 
+            SetBasketList();
+
+        }
+
+        private void SetBasketList() {
+            var tmpValue = 0.0;
+
             Basket.Clear();
             foreach (var temp in DatabaseLocator.Database.BasketProducts.ToList())
             {
                 Basket.Add(temp);
+                tmpValue += temp.Product.Value * temp.Amount;
             };
+
+            ProductsValue = tmpValue;
+            OnPropertyChanged(nameof(ProductsValue));
+
+            var textBlock = Application.Current.MainWindow.FindName("productsValueTextBlock") as TextBlock;
+            if (textBlock != null)
+            {
+                // Odświeżenie wartości w elemencie TextBlock
+                BindingOperations.GetBindingExpressionBase(textBlock, TextBlock.TextProperty)?.UpdateTarget();
+            }
         }
     }
 }
