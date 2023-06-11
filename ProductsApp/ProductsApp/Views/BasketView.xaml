@@ -19,6 +19,7 @@
                             <DataTemplate>
 
                                 <WrapPanel Orientation="Horizontal" Margin="10 10 10 0" >
+                                    
                                     <WrapPanel Orientation="Horizontal" Width="225">
                                         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 10 0">
                                             <RepeatButton Command="{Binding DataContext.IncreaseAmountCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" CommandParameter="{Binding}" Content="+" Width="20" FontWeight="Bold"/>
@@ -40,5 +41,6 @@
             </Border>
             <TextBlock x:Name="productsValueTextBlock" Text="{Binding ProductsValue, Mode=TwoWay, StringFormat='Całkowita wartość: {0} zł'}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
         </WrapPanel>
+        
     </Grid>
 </UserControl>

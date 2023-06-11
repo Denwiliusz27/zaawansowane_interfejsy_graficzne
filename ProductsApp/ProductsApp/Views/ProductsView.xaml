@@ -16,8 +16,8 @@
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
 
-                                <WrapPanel Orientation="Horizontal" Margin="10 10 10 0" >
-                                    <Button Content="Dodaj" Width="60" Margin="0 0 10 0" Command="{Binding DataContext.AddProductToBasketCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                <WrapPanel Orientation="Horizontal" Margin="10 8 10 8" >
+                                    <Button Content="Dodaj" Style="{StaticResource AddProductToBasketButton}" Command="{Binding DataContext.AddProductToBasketCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}" />
 
                                     <WrapPanel Orientation="Horizontal" Width="185">

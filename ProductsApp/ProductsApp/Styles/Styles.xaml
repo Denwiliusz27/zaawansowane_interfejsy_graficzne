@@ -22,5 +22,12 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Width" Value="40" />
     </Style>
-    
+
+    <Style TargetType="{x:Type Button}" x:Key="AddProductToBasketButton">
+        <Setter Property="Background" Value="Green" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Width" Value="60" />
+        <Setter Property="Margin" Value="0 0 10 0" />
+    </Style>
+
 </ResourceDictionary>

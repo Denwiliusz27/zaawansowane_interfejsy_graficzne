@@ -27,11 +27,13 @@ namespace ProductsApp.ViewModels
             BasketNavigateCommand = new RelayCommand(BasketNavigate);
         }
 
+        // ustawienie nawigacji na okno z koszykiem
         private void BasketNavigate()
         {
             MainFrame.Content = new BasketView();
         }
 
+        // ustawienie nawigacji na okno z produktami
         private void ProductsNavigate()
         {
             MainFrame.Content = new ProductsView();

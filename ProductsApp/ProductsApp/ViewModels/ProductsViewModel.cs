@@ -25,17 +25,18 @@ namespace ProductsApp.ViewModels
         public ICommand DeleteProductCommand { get; set; }
         public ICommand AddProductToBasketCommand { get; set; }
 
+        // wiązanie komend z metodami oraz wypełnianie tabeli wartościami z bazy danych
         public ProductsViewModel(){
             AddNewProductCommand = new RelayCommand(AddNewProduct);
             DeleteProductCommand = new RelayCommand(DeleteProduct);
             AddProductToBasketCommand = new RelayCommand(AddProductToBasket);
 
-            // pobieranie  
             foreach (var product in DatabaseLocator.Database.Products.ToList()) {
                 AvailableProducts.Add(product);
             };
         }
 
+        // dodanie nowego produktu do listy i bazy danych
         private void AddNewProduct(){
             AvailableProducts.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
             DatabaseLocator.Database.Add(new ProductModel { Name = NewProductName, Value = NewProductValue });
@@ -44,6 +45,7 @@ namespace ProductsApp.ViewModels
             NewProductValue = 0;
         }
 
+        // usunięcie produktu z listy i z bazy
         private void DeleteProduct(object product) {
             AvailableProducts.Remove((ProductModel)product);
             var dbProduct = DatabaseLocator.Database.Products.FirstOrDefault( x => x.Id == ((ProductModel)product).Id );
@@ -63,6 +65,7 @@ namespace ProductsApp.ViewModels
             }
         }
 
+        // dodanie produktu do koszyka
         private void AddProductToBasket(object product) {
             DatabaseLocator.Database.BasketProducts.Add(
                 new BasketProduct { Amount = 1, ProductId = ((ProductModel)product).Id });

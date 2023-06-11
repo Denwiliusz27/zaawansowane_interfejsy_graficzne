@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProductsApp.Helpers
 {
+    // umożliwia dostęp do bazy danych przez inne klasy
     public class DatabaseLocator
     {
         public static ProductsDbContext Database { get; set; }

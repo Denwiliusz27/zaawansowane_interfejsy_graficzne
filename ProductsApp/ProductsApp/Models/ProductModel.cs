@@ -15,6 +15,6 @@ namespace ProductsApp.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public double Value { get; set; }
-        public BasketProduct BasketProduct { get; set; }
+        public BasketProduct BasketProduct { get; set; } // oznaczenie relacji 1 do 1 z koszykiem
     }
 }

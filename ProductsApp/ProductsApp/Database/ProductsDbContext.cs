@@ -13,15 +13,18 @@ namespace ProductsApp.Database
 {
     public class ProductsDbContext : DbContext
     {
+        // definicja tabel w bazie danych
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<BasketProduct> BasketProducts { get; set; }
 
+        // utworzenie pliku z bazą danych
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string path = Path.Combine(Environment.CurrentDirectory, "Tasks.db");
             optionsBuilder.UseSqlite($"Filename={path}");
         }
 
+        // zainicjowanie podstawowych wartości
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

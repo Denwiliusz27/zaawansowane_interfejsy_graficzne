@@ -12,6 +12,7 @@ namespace ProductsApp.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged = (sender, event_args) => { };
 
+        // w przypadku zmiany wartości jakiegoś pola, powiadamia o tym
         protected void OnPropertyChanged(string name)
         {
             PropertyChanged(this, new PropertyChangedEventArgs(name));

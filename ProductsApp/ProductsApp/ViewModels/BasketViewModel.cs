@@ -17,12 +17,14 @@ namespace ProductsApp.ViewModels
 {
     public class BasketViewModel: BaseViewModel
     {
+        // lista produktów w koszyku
         public ObservableCollection<BasketProduct> Basket { get; set; } = new ObservableCollection<BasketProduct>();
         public double ProductsValue { get; set; }
         public ICommand DeleteProductFromBasketCommand { get; set; }
         public ICommand IncreaseAmountCommand { get; set; }
         public ICommand DecreaseAmountCommand { get; set; }
 
+        // wiązanie komend z funkcjami, zainicjowanie tabeli produktów
         public BasketViewModel()
         {
             DeleteProductFromBasketCommand = new RelayCommand(DeleteProductFromBasket);
@@ -32,7 +34,7 @@ namespace ProductsApp.ViewModels
             SetBasketList();
         }
 
-
+        // usuwanie produktu z koszyka
         private void DeleteProductFromBasket(object product)
         {
             Basket.Remove((BasketProduct)product);
@@ -43,8 +45,11 @@ namespace ProductsApp.ViewModels
                 DatabaseLocator.Database.BasketProducts.Remove(dbProduct);
                 DatabaseLocator.Database.SaveChanges();
             }
+
+            SetBasketList();
         }
 
+        // zwiększanie ilości danego produktu
         private void IncreaseAmount(object product)
         {
             var basketProduct = (BasketProduct)product;
@@ -54,6 +59,7 @@ namespace ProductsApp.ViewModels
             SetBasketList();
         }
 
+        // zmniejszanie ilości danego produktu
         private void DecreaseAmount(object product)
         {
             var basketProduct = (BasketProduct)product;
@@ -64,9 +70,9 @@ namespace ProductsApp.ViewModels
             }
 
             SetBasketList();
-
         }
 
+        // ustawienie wartości wszystkich produktów oraz zapisanie produktów z bazy w koszyku
         private void SetBasketList() {
             var tmpValue = 0.0;
 
@@ -79,13 +85,6 @@ namespace ProductsApp.ViewModels
 
             ProductsValue = tmpValue;
             OnPropertyChanged(nameof(ProductsValue));
-
-            var textBlock = Application.Current.MainWindow.FindName("productsValueTextBlock") as TextBlock;
-            if (textBlock != null)
-            {
-                // Odświeżenie wartości w elemencie TextBlock
-                BindingOperations.GetBindingExpressionBase(textBlock, TextBlock.TextProperty)?.UpdateTarget();
-            }
         }
     }
 }
